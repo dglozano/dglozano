@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
 import { createMuiTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 import { blueGrey, deepOrange } from "@material-ui/core/colors";
+
+import "i18n";
+import App from "App";
+import * as serviceWorker from "serviceWorker";
 
 const theme = createMuiTheme({
   palette: {
