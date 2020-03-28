@@ -18,9 +18,13 @@ import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles(theme => ({
   main: {
-    minHeight: "75vh",
-    backgroundColor: theme.palette.primary.main,
-    padding: theme.spacing(3)
+    minHeight: "80vh",
+    padding: theme.spacing(3),
+    background: "#011f2c",
+    backgroundImage:
+      "linear-gradient(#011f2cee, #026492DD), url('static/head-section-background.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "bottom center"
   },
   avatar: {
     width: theme.spacing(6) * 5,
