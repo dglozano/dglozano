@@ -12,6 +12,9 @@ const theme = createMuiTheme({
     type: "dark",
     primary: { main: blueGrey[800] },
     secondary: { main: deepOrange[400] }
+  },
+  typography: {
+    fontFamily: "'Montserrat', sans-serif"
   }
 });
 
