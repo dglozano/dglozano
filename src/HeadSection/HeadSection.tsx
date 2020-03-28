@@ -27,8 +27,10 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(6) * 5,
     marginBottom: theme.spacing(2)
   },
-  textPadding: {
-    padding: theme.spacing(1)
+  name: {
+    fontWeight: 800,
+    letterSpacing: "-0.1rem",
+    padding: theme.spacing(2)
   },
   socialMediaContainer: {
     padding: theme.spacing(3)
@@ -97,12 +99,12 @@ const HeadSection = () => {
           className={classes.avatar}
         />
       </Grid>
-      <Grid item className={classes.textPadding}>
-        <Typography variant="h4" align="center">
+      <Grid item>
+        <Typography variant="h3" align="center" className={classes.name}>
           Diego Garcia Lozano
         </Typography>
       </Grid>
-      <Grid item className={classes.textPadding}>
+      <Grid item>
         <Typography variant="h5" align="center">
           {t("softwareEngineer")}
         </Typography>
