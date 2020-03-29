@@ -1,6 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createMuiTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
+import {
+  createMuiTheme,
+  CssBaseline,
+  ThemeProvider,
+  responsiveFontSizes
+} from "@material-ui/core";
 import { blueGrey, deepOrange } from "@material-ui/core/colors";
 
 import "i18n";
@@ -18,10 +23,12 @@ const theme = createMuiTheme({
   }
 });
 
+const themeWithResponsiveFontSizes = responsiveFontSizes(theme);
+
 ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeWithResponsiveFontSizes}>
       <App />
     </ThemeProvider>
   </React.StrictMode>,
