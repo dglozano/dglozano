@@ -111,7 +111,7 @@ const HeadSection = () => {
       </Grid>
       <Grid item>
         <Typography variant="h3" align="center" className={classes.name}>
-          Diego Garcia Lozano
+          Diego García Lozano
         </Typography>
       </Grid>
       <Grid item>
