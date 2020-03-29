@@ -6,7 +6,9 @@ import {
   makeStyles,
   Avatar,
   Paper,
-  Link
+  Link,
+  Grow,
+  Fade
 } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import { socialMediaAccountsDetails } from "config/socialMedia";
@@ -63,23 +65,30 @@ const HeadSection = () => {
       square
       className={classes.main}
     >
-      <Grid item>
-        <Avatar
-          alt="Diego Garcia Lozano"
-          src="/static/picture-square.png"
-          className={classes.avatar}
-        />
-      </Grid>
-      <Grid item>
-        <Typography variant="h3" align="center" className={classes.name}>
-          Diego García Lozano
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="h5" align="center" className={classes.jobTitle}>
-          {t("softwareEngineer")}
-        </Typography>
-      </Grid>
+      <Fade in timeout={1000}>
+        <Grid item>
+          <Avatar
+            alt="Diego Garcia Lozano"
+            src="/static/picture-square.png"
+            className={classes.avatar}
+          />
+        </Grid>
+      </Fade>
+      <Grow in timeout={1500}>
+        <Grid item>
+          <Typography variant="h3" align="center" className={classes.name}>
+            Diego García Lozano
+          </Typography>
+        </Grid>
+      </Grow>
+      <Grow in timeout={1500}>
+        <Grid item>
+          <Typography variant="h5" align="center" className={classes.jobTitle}>
+            {t("softwareEngineer")}
+          </Typography>
+        </Grid>
+      </Grow>
+
       <Grid
         item
         container
@@ -90,17 +99,19 @@ const HeadSection = () => {
       >
         {Object.entries(socialMediaAccountsDetails).map(
           ([key, { title, href, Icon }]) => (
-            <IconButton
-              title={title}
-              component={Link}
-              href={href}
-              target="_blank"
-              rel="noopener"
-              key={key}
-              className={classes.socialMediaIconButton}
-            >
-              <Icon />
-            </IconButton>
+            <Fade in timeout={2000}>
+              <IconButton
+                title={title}
+                component={Link}
+                href={href}
+                target="_blank"
+                rel="noopener"
+                key={key}
+                className={classes.socialMediaIconButton}
+              >
+                <Icon />
+              </IconButton>
+            </Fade>
           )
         )}
       </Grid>
