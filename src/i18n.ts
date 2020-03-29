@@ -16,17 +16,23 @@ i18n
     resources: {
       en: {
         translation: {
-          softwareEngineer: "Software Engineer"
+          softwareEngineer: "Software Engineer",
+          madeWithLoveBy: "Made with <1/> by ",
+          codeAvailableIn: "Code available in "
         }
       },
       es: {
         translation: {
-          softwareEngineer: "Ingeniero en Sistemas de Información"
+          softwareEngineer: "Ingeniero en Sistemas de Información",
+          madeWithLoveBy: "Hecho con <1/> por ",
+          codeAvailableIn: "Código disponible en "
         }
       },
       no: {
         translation: {
-          softwareEngineer: "Programvareingeniør"
+          softwareEngineer: "Programvareingeniør",
+          madeWithLoveBy: "Laget med <1/> av ",
+          codeAvailableIn: "Koden tilgjengelig i "
         }
       }
     }
