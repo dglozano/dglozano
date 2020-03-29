@@ -5,16 +5,11 @@ import {
   IconButton,
   makeStyles,
   Avatar,
-  Paper
+  Paper,
+  Link
 } from "@material-ui/core";
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaStackOverflow,
-  FaTwitter,
-  FaInstagram
-} from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { socialMediaAccountsDetails } from "config/socialMedia";
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -53,40 +48,6 @@ const useStyles = makeStyles(theme => ({
     }
   }
 }));
-
-type SocialMediaLinkDetails = {
-  title: string;
-  href: string;
-  Icon: React.ReactNode;
-};
-
-const socialMediaAccountsLinkDetails: Array<SocialMediaLinkDetails> = [
-  {
-    title: "Linkedin",
-    href: "https://www.linkedin.com/in/diegogarcialozano/",
-    Icon: <FaLinkedinIn />
-  },
-  {
-    title: "Github",
-    href: "https://github.com/dglozano",
-    Icon: <FaGithub />
-  },
-  {
-    title: "StackOverflow",
-    href: "https://stackoverflow.com/users/10648865/dglozano",
-    Icon: <FaStackOverflow />
-  },
-  {
-    title: "Twitter",
-    href: "https://twitter.com/dglozano95",
-    Icon: <FaTwitter />
-  },
-  {
-    title: "Instagram",
-    href: "https://instagram.com/diegogarcialozano",
-    Icon: <FaInstagram />
-  }
-];
 
 const HeadSection = () => {
   const classes = useStyles();
@@ -127,18 +88,21 @@ const HeadSection = () => {
         justify="center"
         className={classes.socialMediaContainer}
       >
-        {socialMediaAccountsLinkDetails.map(({ title, href, Icon }, index) => (
-          <IconButton
-            title={title}
-            component="a"
-            href={href}
-            target="_blank"
-            key={index}
-            className={classes.socialMediaIconButton}
-          >
-            {Icon}
-          </IconButton>
-        ))}
+        {Object.entries(socialMediaAccountsDetails).map(
+          ([key, { title, href, Icon }]) => (
+            <IconButton
+              title={title}
+              component={Link}
+              href={href}
+              target="_blank"
+              rel="noopener"
+              key={key}
+              className={classes.socialMediaIconButton}
+            >
+              <Icon />
+            </IconButton>
+          )
+        )}
       </Grid>
     </Grid>
   );
