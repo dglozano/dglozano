@@ -9,7 +9,8 @@ import SpanishFlag from "icons/SpanishFlag";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
-    background: theme.palette.primary.dark
+    background: theme.palette.primary.dark,
+    ...theme.mixins.toolbar
   }
 }));
 
