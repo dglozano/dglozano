@@ -9,13 +9,13 @@ import {
 import { blueGrey, deepOrange } from "@material-ui/core/colors";
 
 import "i18n";
-import App from "App";
+import App from "app/App";
 import * as serviceWorker from "serviceWorker";
 
 const theme = createMuiTheme({
   palette: {
     type: "dark",
-    primary: { main: blueGrey[800] },
+    primary: { main: blueGrey[900] },
     secondary: { main: deepOrange[400] }
   },
   typography: {

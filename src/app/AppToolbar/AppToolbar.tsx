@@ -31,7 +31,7 @@ const AppToolbar = () => {
 
   return (
     <AppBar position="sticky" className={classes.appBar}>
-      <Toolbar>
+      <Toolbar id="back-to-top-anchor">
         <ToggleButtonGroup
           size="small"
           value={language}
