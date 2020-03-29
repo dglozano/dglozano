@@ -18,9 +18,8 @@ import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles(theme => ({
   main: {
-    minHeight: "80vh",
+    minHeight: "70vh",
     padding: theme.spacing(3),
-    background: "#011f2c",
     backgroundImage:
       "linear-gradient(#011f2cee, #026492DD), url('static/head-section-background.png')",
     backgroundSize: "cover",
@@ -29,12 +28,19 @@ const useStyles = makeStyles(theme => ({
   avatar: {
     width: theme.spacing(6) * 5,
     height: theme.spacing(6) * 5,
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    [theme.breakpoints.down("xs")]: {
+      width: theme.spacing(6) * 4,
+      height: theme.spacing(6) * 4
+    }
   },
   name: {
     fontWeight: 800,
     letterSpacing: "-0.1rem",
     padding: theme.spacing(2)
+  },
+  jobTitle: {
+    letterSpacing: "-0.1rem"
   },
   socialMediaContainer: {
     padding: theme.spacing(3)
@@ -109,7 +115,7 @@ const HeadSection = () => {
         </Typography>
       </Grid>
       <Grid item>
-        <Typography variant="h5" align="center">
+        <Typography variant="h5" align="center" className={classes.jobTitle}>
           {t("softwareEngineer")}
         </Typography>
       </Grid>
