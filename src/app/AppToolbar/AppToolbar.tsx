@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 const AppToolbar = () => {
   const classes = useStyles();
   const { i18n } = useTranslation();
-  const [language, setLanguage] = React.useState(i18n.language);
+  const [language, setLanguage] = React.useState(i18n.languages[0]);
 
   const handleLanguageChange = (
     _event: React.MouseEvent<HTMLElement>,
