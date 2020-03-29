@@ -99,7 +99,7 @@ const HeadSection = () => {
       >
         {Object.entries(socialMediaAccountsDetails).map(
           ([key, { title, href, Icon }]) => (
-            <Fade in timeout={2000}>
+            <Fade in timeout={2000} key={key}>
               <IconButton
                 title={title}
                 component={Link}
