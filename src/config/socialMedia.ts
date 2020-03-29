@@ -14,7 +14,7 @@ type SocialMediaLinkDetails = {
 };
 
 export const socialMediaAccountsDetails: {
-  [id: string]: SocialMediaLinkDetails;
+  [key: string]: SocialMediaLinkDetails;
 } = {
   linkedin: {
     title: "Linkedin",
