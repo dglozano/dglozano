@@ -13,6 +13,9 @@ i18n
   .init({
     fallbackLng: "en",
     debug: false,
+    load: "languageOnly",
+    whitelist: ["en", "es", "no"],
+    detection: { checkWhitelist: true },
     resources: {
       en: {
         translation: {
