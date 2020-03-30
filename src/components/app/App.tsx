@@ -1,17 +1,16 @@
 import React from "react";
 import {
+  Fab,
   Grid,
   makeStyles,
   useScrollTrigger,
-  Zoom,
-  Fab
+  Zoom
 } from "@material-ui/core";
-
-import AppToolbar from "app/AppToolbar/AppToolbar";
-import HeadSectionContainer from "app/sections/HeadSection/HeadSectionContainer";
-import ContactSection from "app/sections/ContactSection/ContactSection";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import Footer from "app/Footer/Footer";
+
+import AppFooter from "components/app/AppFooter";
+import AppToolbar from "components/app/AppToolbar";
+import HeadSectionContainer from "components/home/HeadSection/HeadSectionContainer";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -50,7 +49,6 @@ const App = () => {
       <AppToolbar />
       <Grid container direction="column" className={classes.content}>
         <HeadSectionContainer />
-        <ContactSection />
       </Grid>
       <Zoom in={trigger}>
         <div
@@ -63,7 +61,7 @@ const App = () => {
           </Fab>
         </div>
       </Zoom>
-      <Footer />
+      <AppFooter />
     </Grid>
   );
 };

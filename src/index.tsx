@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 
 import "i18n";
-import App from "app/App";
+import App from "components/app/App";
 import * as serviceWorker from "serviceWorker";
 import { lightTheme } from "config/themes";
 
