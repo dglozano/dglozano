@@ -42,13 +42,17 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: "-0.1rem"
   },
   socialMediaContainer: {
-    padding: theme.spacing(3)
+    padding: `${theme.spacing(3)}px 0px`
   },
   socialMediaIconButton: {
     background: theme.palette.primary.dark,
     margin: theme.spacing(1),
     "&:hover": {
       background: theme.palette.secondary.main
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: theme.typography.pxToRem(20),
+      padding: 8
     }
   }
 }));
