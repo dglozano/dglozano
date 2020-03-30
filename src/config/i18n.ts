@@ -2,6 +2,10 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
+import en from "config/translations/en";
+import es from "config/translations/es";
+import no from "config/translations/no";
+
 i18n
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
@@ -17,27 +21,9 @@ i18n
     whitelist: ["en", "es", "no"],
     detection: { checkWhitelist: true },
     resources: {
-      en: {
-        translation: {
-          softwareEngineer: "Software Engineer",
-          madeWithLoveBy: "Made with <1/> by ",
-          codeAvailableIn: "Code available in "
-        }
-      },
-      es: {
-        translation: {
-          softwareEngineer: "Ingeniero en Sistemas de Información",
-          madeWithLoveBy: "Hecho con <1/> por ",
-          codeAvailableIn: "Código disponible en "
-        }
-      },
-      no: {
-        translation: {
-          softwareEngineer: "Programvareingeniør",
-          madeWithLoveBy: "Laget med <1/> av ",
-          codeAvailableIn: "Koden tilgjengelig i "
-        }
-      }
+      en,
+      es,
+      no
     }
   });
 

@@ -4,9 +4,9 @@ import { ToggleButton, ToggleButtonGroup } from "@material-ui/lab";
 import { useTranslation } from "react-i18next";
 
 import { darkTheme } from "config/themes";
-import BritishFlag from "icons/BritishFlag";
-import NorwayFlag from "icons/NorwayFlag";
-import SpanishFlag from "icons/SpanishFlag";
+import BritishFlag from "components/icons/BritishFlag";
+import NorwayFlag from "components/icons/NorwayFlag";
+import SpanishFlag from "components/icons/SpanishFlag";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
