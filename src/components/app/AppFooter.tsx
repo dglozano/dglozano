@@ -1,16 +1,17 @@
 import React from "react";
 import {
-  Paper,
   Grid,
-  Typography,
-  makeStyles,
   Link,
-  ThemeProvider
+  makeStyles,
+  Paper,
+  ThemeProvider,
+  Typography
 } from "@material-ui/core";
 import { FaHeart as HeartIcon } from "react-icons/fa";
 import { Trans, useTranslation } from "react-i18next";
-import { socialMediaAccountsDetails } from "config/socialMedia";
+
 import { darkTheme } from "config/themes";
+import { socialMediaAccountsDetails } from "config/socialMedia";
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Footer = () => {
+const AppFooter = () => {
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -68,4 +69,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default AppFooter;

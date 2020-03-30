@@ -1,16 +1,17 @@
 import React from "react";
 import {
-  Typography,
-  Grid,
-  IconButton,
-  makeStyles,
   Avatar,
-  Paper,
-  Link,
+  Fade,
+  Grid,
   Grow,
-  Fade
+  IconButton,
+  Link,
+  makeStyles,
+  Paper,
+  Typography
 } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
+
 import { socialMediaAccountsDetails } from "config/socialMedia";
 
 const useStyles = makeStyles(theme => ({

@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles, ThemeProvider } from "@material-ui/core";
 
-import HeadSection from "app/sections/HeadSection/HeadSection";
 import { darkTheme } from "config/themes";
+import HeadSection from "components/home/HeadSection/HeadSection";
 
 const waveStyles = makeStyles(theme => ({
   wave: {
