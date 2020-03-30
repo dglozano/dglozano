@@ -1,12 +1,12 @@
 import React from "react";
-import { AppBar, Toolbar, makeStyles, ThemeProvider } from "@material-ui/core";
+import { AppBar, makeStyles, ThemeProvider, Toolbar } from "@material-ui/core";
 import { ToggleButton, ToggleButtonGroup } from "@material-ui/lab";
 import { useTranslation } from "react-i18next";
 
-import NorwayFlag from "icons/NorwayFlag";
-import BritishFlag from "icons/BritishFlag";
-import SpanishFlag from "icons/SpanishFlag";
 import { darkTheme } from "config/themes";
+import BritishFlag from "components/icons/BritishFlag";
+import NorwayFlag from "components/icons/NorwayFlag";
+import SpanishFlag from "components/icons/SpanishFlag";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
