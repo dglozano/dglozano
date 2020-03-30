@@ -20,7 +20,8 @@ const useStyles = makeStyles(theme => ({
     backgroundImage:
       "linear-gradient(#011f2cee, #026492DD), url('static/head-section-background.png')",
     backgroundSize: "cover",
-    backgroundPosition: "bottom center"
+    backgroundPosition: "bottom center",
+    position: "relative"
   },
   avatar: {
     width: theme.spacing(6) * 5,

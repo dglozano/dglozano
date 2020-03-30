@@ -1,34 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  createMuiTheme,
-  CssBaseline,
-  ThemeProvider,
-  responsiveFontSizes
-} from "@material-ui/core";
-import { blueGrey, deepOrange } from "@material-ui/core/colors";
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
 
 import "i18n";
 import App from "app/App";
 import * as serviceWorker from "serviceWorker";
-
-const theme = createMuiTheme({
-  palette: {
-    type: "dark",
-    primary: { main: blueGrey[900] },
-    secondary: { main: deepOrange[400] }
-  },
-  typography: {
-    fontFamily: "'Montserrat', sans-serif"
-  }
-});
-
-const themeWithResponsiveFontSizes = responsiveFontSizes(theme);
+import { lightTheme } from "config/themes";
 
 ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
-    <ThemeProvider theme={themeWithResponsiveFontSizes}>
+    <ThemeProvider theme={lightTheme}>
       <App />
     </ThemeProvider>
   </React.StrictMode>,

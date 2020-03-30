@@ -1,11 +1,12 @@
 import React from "react";
-import { AppBar, Toolbar, makeStyles } from "@material-ui/core";
+import { AppBar, Toolbar, makeStyles, ThemeProvider } from "@material-ui/core";
 import { ToggleButton, ToggleButtonGroup } from "@material-ui/lab";
 import { useTranslation } from "react-i18next";
 
 import NorwayFlag from "icons/NorwayFlag";
 import BritishFlag from "icons/BritishFlag";
 import SpanishFlag from "icons/SpanishFlag";
+import { darkTheme } from "config/themes";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -30,26 +31,28 @@ const AppToolbar = () => {
   };
 
   return (
-    <AppBar position="sticky" className={classes.appBar}>
-      <Toolbar id="back-to-top-anchor">
-        <ToggleButtonGroup
-          size="small"
-          value={language}
-          exclusive
-          onChange={handleLanguageChange}
-        >
-          <ToggleButton value="en">
-            <BritishFlag />
-          </ToggleButton>
-          <ToggleButton value="es">
-            <SpanishFlag />
-          </ToggleButton>
-          <ToggleButton value="no">
-            <NorwayFlag />
-          </ToggleButton>
-        </ToggleButtonGroup>
-      </Toolbar>
-    </AppBar>
+    <ThemeProvider theme={darkTheme}>
+      <AppBar position="sticky" className={classes.appBar}>
+        <Toolbar id="back-to-top-anchor">
+          <ToggleButtonGroup
+            size="small"
+            value={language}
+            exclusive
+            onChange={handleLanguageChange}
+          >
+            <ToggleButton value="en">
+              <BritishFlag />
+            </ToggleButton>
+            <ToggleButton value="es">
+              <SpanishFlag />
+            </ToggleButton>
+            <ToggleButton value="no">
+              <NorwayFlag />
+            </ToggleButton>
+          </ToggleButtonGroup>
+        </Toolbar>
+      </AppBar>
+    </ThemeProvider>
   );
 };
 

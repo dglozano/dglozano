@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 
 import AppToolbar from "app/AppToolbar/AppToolbar";
-import HeadSection from "app/sections/HeadSection/HeadSection";
+import HeadSectionContainer from "app/sections/HeadSection/HeadSectionContainer";
 import ContactSection from "app/sections/ContactSection/ContactSection";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Footer from "app/Footer/Footer";
@@ -49,7 +49,7 @@ const App = () => {
     <Grid container direction="column" className={classes.root}>
       <AppToolbar />
       <Grid container direction="column" className={classes.content}>
-        <HeadSection />
+        <HeadSectionContainer />
         <ContactSection />
       </Grid>
       <Zoom in={trigger}>
