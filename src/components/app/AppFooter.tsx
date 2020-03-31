@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     ...theme.mixins.toolbar
   },
   heartIcon: {
-    color: theme.palette.secondary.light
+    color: theme.palette.secondary.main
   }
 }));
 
@@ -33,37 +33,43 @@ const AppFooter = () => {
       <Grid
         container
         alignItems="center"
-        justify="space-around"
         component={Paper}
         square
         className={classes.footer}
       >
-        <Typography variant="body2">
-          <Trans i18nKey="madeWithLoveBy">
-            Made with <HeartIcon className={classes.heartIcon} /> by
-          </Trans>
-          <Link
-            href={socialMediaAccountsDetails["github"].href}
-            target="_blank"
-            rel="noopener"
-            color="inherit"
-            underline="hover"
-          >
-            <strong>@{socialMediaAccountsDetails["github"].accountName}</strong>
-          </Link>
-        </Typography>
-        <Typography variant="body2">
-          {t("codeAvailableIn")}
-          <Link
-            href={`${socialMediaAccountsDetails["github"].href}/dglozano`}
-            target="_blank"
-            rel="noopener"
-            color="inherit"
-            underline="hover"
-          >
-            <strong>Github</strong>
-          </Link>
-        </Typography>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="body2" align="center">
+            <Trans i18nKey="madeWithLoveBy">
+              Made with <HeartIcon className={classes.heartIcon} /> by
+            </Trans>
+            <Link
+              href={socialMediaAccountsDetails["github"].href}
+              target="_blank"
+              rel="noopener"
+              color="inherit"
+              underline="hover"
+            >
+              &nbsp;
+              <strong>
+                @{socialMediaAccountsDetails["github"].accountName}
+              </strong>
+            </Link>
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="body2" align="center">
+            {t("codeAvailableIn")}&nbsp;
+            <Link
+              href={`${socialMediaAccountsDetails["github"].href}/dglozano`}
+              target="_blank"
+              rel="noopener"
+              color="inherit"
+              underline="hover"
+            >
+              <strong>Github</strong>
+            </Link>
+          </Typography>
+        </Grid>
       </Grid>
     </ThemeProvider>
   );

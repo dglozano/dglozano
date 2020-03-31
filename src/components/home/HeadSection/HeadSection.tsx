@@ -22,7 +22,10 @@ const useStyles = makeStyles(theme => ({
       "linear-gradient(#011f2cee, #026492DD), url('static/head-section-background.png')",
     backgroundSize: "cover",
     backgroundPosition: "bottom center",
-    position: "relative"
+    position: "relative",
+    [theme.breakpoints.down("xs")]: {
+      minHeight: "60vh"
+    }
   },
   avatar: {
     width: theme.spacing(6) * 5,
@@ -51,8 +54,8 @@ const useStyles = makeStyles(theme => ({
       background: theme.palette.secondary.main
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: theme.typography.pxToRem(20),
-      padding: 8
+      fontSize: theme.typography.pxToRem(18),
+      padding: 10
     }
   }
 }));
