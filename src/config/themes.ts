@@ -9,6 +9,13 @@ export const lightTheme = responsiveFontSizes(
     },
     typography: {
       fontFamily: "'Montserrat', sans-serif"
+    },
+    overrides: {
+      MuiButton: {
+        root: {
+          borderRadius: 500
+        }
+      }
     }
   })
 );
