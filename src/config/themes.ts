@@ -5,7 +5,7 @@ export const lightTheme = responsiveFontSizes(
   createMuiTheme({
     palette: {
       primary: { main: blueGrey[900] },
-      secondary: { main: deepOrange[400] }
+      secondary: { main: deepOrange[800] }
     },
     typography: {
       fontFamily: "'Montserrat', sans-serif"
