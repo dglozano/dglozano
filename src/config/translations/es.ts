@@ -3,6 +3,7 @@ const es = {
     softwareEngineer: "Ingeniero en Sistemas de Información",
     madeWithLoveBy: "Hecho con <1/> por",
     codeAvailableIn: "Código disponible en",
+    download: "Descargar"
   }
 };
 
