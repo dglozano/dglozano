@@ -8,7 +8,7 @@ import {
   Button,
   Typography,
   useMediaQuery,
-  Theme
+  Theme,
 } from "@material-ui/core";
 import DownloadIcon from "@material-ui/icons/GetApp";
 import { ToggleButton, ToggleButtonGroup } from "@material-ui/lab";
@@ -21,11 +21,11 @@ import SpanishFlag from "components/icons/SpanishFlag";
 
 const cvPdf = require("static/CV-en.pdf");
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   appBar: {
     background: theme.palette.primary.dark,
-    ...theme.mixins.toolbar
-  }
+    ...theme.mixins.toolbar,
+  },
 }));
 
 const AppToolbar = () => {
@@ -49,7 +49,7 @@ const AppToolbar = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <AppBar position="sticky" className={classes.appBar}>
-        <Toolbar id="back-to-top-anchor">
+        <Toolbar>
           <Grid container justify="space-between" alignItems="center">
             <Grid item>
               <ToggleButtonGroup

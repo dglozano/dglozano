@@ -5,7 +5,7 @@ import {
   makeStyles,
   Paper,
   ThemeProvider,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import { FaHeart as HeartIcon } from "react-icons/fa";
 import { Trans, useTranslation } from "react-i18next";
@@ -13,15 +13,15 @@ import { Trans, useTranslation } from "react-i18next";
 import { darkTheme } from "config/themes";
 import { socialMediaAccountsDetails } from "config/socialMedia";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   footer: {
     background: theme.palette.primary.dark,
     padding: theme.spacing(2),
-    ...theme.mixins.toolbar
+    ...theme.mixins.toolbar,
   },
   heartIcon: {
-    color: theme.palette.secondary.main
-  }
+    color: theme.palette.secondary.main,
+  },
 }));
 
 const AppFooter = () => {
@@ -42,6 +42,7 @@ const AppFooter = () => {
             <Trans i18nKey="madeWithLoveBy">
               Made with <HeartIcon className={classes.heartIcon} /> by
             </Trans>
+            &nbsp;
             <Link
               href={socialMediaAccountsDetails["github"].href}
               target="_blank"
@@ -49,7 +50,6 @@ const AppFooter = () => {
               color="inherit"
               underline="hover"
             >
-              &nbsp;
               <strong>
                 @{socialMediaAccountsDetails["github"].accountName}
               </strong>
