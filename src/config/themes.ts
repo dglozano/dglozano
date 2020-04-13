@@ -54,8 +54,9 @@ export const darkTheme = responsiveFontSizes(
     ...lightTheme,
     palette: {
       type: "dark",
-      primary: { main: lightTheme.palette.primary.main },
+      primary: { main: blueGrey[100] },
       secondary: { main: lightTheme.palette.secondary.main },
+      background: { paper: blueGrey[900] },
     },
   })
 );

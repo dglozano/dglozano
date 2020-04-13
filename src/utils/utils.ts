@@ -7,3 +7,9 @@ export const scrollToView = (event: React.MouseEvent, anchorId: string) => {
     anchor.scrollIntoView({ behavior: "smooth", block: "end" });
   }
 };
+
+export const encode = (data: any) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
