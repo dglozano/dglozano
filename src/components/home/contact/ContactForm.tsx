@@ -201,7 +201,7 @@ const ContactForm = () => {
           severity="success"
           onClose={() => setSnackbarState("closed")}
         >
-          Form submitted successfully!
+          {t("formSuccess")}
         </Alert>
       </Snackbar>
       <Snackbar
@@ -215,7 +215,7 @@ const ContactForm = () => {
           severity="error"
           onClose={() => setSnackbarState("closed")}
         >
-          Upss! There was an error. Please try again.
+          {t("formError")}
         </Alert>
       </Snackbar>
     </Paper>

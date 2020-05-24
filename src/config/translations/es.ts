@@ -1,6 +1,8 @@
 const es = {
   translation: {
-    softwareEngineer: "Ingeniero en Sistemas de Información",
+    headTitle: "Diego Garcia Lozano",
+    headSubtitle:
+      "Hola! Soy un Ingeniero en Sistemas de Información viviendo en Stavanger, Noruega.",
     madeWithLoveBy: "Hecho con <1/> por",
     codeAvailableIn: "Código disponible en",
     download: "Descargar",
@@ -16,6 +18,8 @@ const es = {
       "El mensaje debe contener al menos {{count}} caracter",
     messageValidationError_plural:
       "El mensaje debe contener al menos {{count}} caracteres",
+    formSuccess: "El formulario se envío correctamente!",
+    formError: "Upss! Hubo un error. Prueba de nuevo por favor.",
   },
 };
 
