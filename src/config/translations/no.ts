@@ -2,7 +2,7 @@ const no = {
   translation: {
     headTitle: "Diego Garcia Lozano",
     headSubtitle:
-      "Hei! Jeg er en argentinsk Programvareingeniør som holder til i Stavanger, Norge.",
+      "Hei! Jeg er en argentinsk programvareingeniør som holder til i Stavanger, Norge.",
     madeWithLoveBy: "Laget med <1/> av",
     codeAvailableIn: "Kildekode tilgjengelig i",
     download: "Last ned",
