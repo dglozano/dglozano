@@ -11,6 +11,8 @@ import SvgDivider from "components/svg/SvgDivider";
 import UCurveSvg from "components/svg/UCurveSvg";
 import VCurveSvg from "components/svg/VCurveSvg";
 
+import { experiences } from "config/experience";
+
 const HomeContainer = () => {
   const theme: Theme = useTheme();
 
@@ -24,12 +26,13 @@ const HomeContainer = () => {
         SvgCurve={UCurveSvg}
       />
 
-      <AboutMeSection />
+      <ExperienceSection experiences={experiences} />
 
       <VCurveSvg
         topBorderColor={theme.palette.secondary.main}
         bottomBorderColor={theme.palette.secondary.light}
         fillColor={theme.dglozano.palette.darkBlue}
+        backgroundColor={theme.dglozano.palette.lightOrange}
       />
 
       <ContactSection />

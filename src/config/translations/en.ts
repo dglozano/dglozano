@@ -18,6 +18,7 @@ const en = {
       "The message has to be at least {{count}} character long",
     messageValidationError_plural:
       "The message has to be at least {{count}} characters long",
+    experience: "Experience",
     formSuccess: "Form submitted successfully!",
     formError: "Upss! There was an error. Please try again.",
   },

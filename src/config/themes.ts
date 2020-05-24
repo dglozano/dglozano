@@ -7,6 +7,8 @@ declare module "@material-ui/core/styles/createMuiTheme" {
       palette: {
         lightBlue: string;
         darkBlue: string;
+        lightOrange: string;
+        white: string;
       };
     };
   }
@@ -16,6 +18,8 @@ declare module "@material-ui/core/styles/createMuiTheme" {
       palette?: {
         darkBlue?: string;
         lightBlue?: string;
+        lightOrange?: string;
+        white?: string;
       };
     };
   }
@@ -42,8 +46,10 @@ export const lightTheme = responsiveFontSizes(
     },
     dglozano: {
       palette: {
-        darkBlue: "#011f2cee",
+        darkBlue: "#011f2c",
         lightBlue: "#026492DD",
+        lightOrange: "#d6bfac",
+        white: "#fafafa",
       },
     },
   })

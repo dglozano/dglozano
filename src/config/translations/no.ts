@@ -16,6 +16,7 @@ const no = {
     nameValidationError: "Vennligst skriv inn navnet ditt",
     messageValidationError: "Meldingen må være minst {{count}} tegn",
     messageValidationError_plural: "Meldingen må være minst {{count}} tegn",
+    experience: "Erfaring",
     formSuccess: "Skjemaet ble sendt!",
     formError: "Upss! Det oppsto en feil. Vennligst prøv igjen.",
   },

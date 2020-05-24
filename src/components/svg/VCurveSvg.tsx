@@ -4,6 +4,7 @@ type Props = {
   topBorderColor: string;
   bottomBorderColor: string;
   fillColor: string;
+  backgroundColor: string;
 };
 
 const VCurveSvg = (props: Props) => (
@@ -12,7 +13,7 @@ const VCurveSvg = (props: Props) => (
     width="100%"
     viewBox="0 0 1600 100"
     preserveAspectRatio="none"
-    style={{ display: "block" }}
+    style={{ display: "block", backgroundColor: props.backgroundColor }}
   >
     <polygon
       style={{
