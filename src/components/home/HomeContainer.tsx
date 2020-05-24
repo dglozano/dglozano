@@ -3,9 +3,9 @@ import React from "react";
 import { useTheme } from "@material-ui/styles";
 import { Theme } from "@material-ui/core";
 
-import AboutMeSection from "components/home/sections/AboutMeSection";
-import ContactSection from "components/home/sections/contact/ContactSection";
-import HeadSection from "components/home/sections/HeadSection";
+import ExperienceSection from "components/home/experience/ExperienceSection";
+import ContactSection from "components/home/contact/ContactSection";
+import HeadSection from "components/home/head/HeadSection";
 
 import SvgDivider from "components/svg/SvgDivider";
 import UCurveSvg from "components/svg/UCurveSvg";

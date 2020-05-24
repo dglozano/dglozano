@@ -1,6 +1,8 @@
 const en = {
   translation: {
-    softwareEngineer: "Software Engineer",
+    headTitle: "Diego Garcia Lozano",
+    headSubtitle:
+      "Hi! I'm an Argentinian Software Engineer based in Stavanger, Norway.",
     madeWithLoveBy: "Made with <1/> by",
     codeAvailableIn: "Code available in",
     download: "Download",
@@ -16,6 +18,8 @@ const en = {
       "The message has to be at least {{count}} character long",
     messageValidationError_plural:
       "The message has to be at least {{count}} characters long",
+    formSuccess: "Form submitted successfully!",
+    formError: "Upss! There was an error. Please try again.",
   },
 };
 

@@ -1,6 +1,8 @@
 const no = {
   translation: {
-    softwareEngineer: "Programvareingeniør",
+    headTitle: "Diego Garcia Lozano",
+    headSubtitle:
+      "Hei! Jeg er en argentinsk Programvareingeniør som holder til i Stavanger, Norge.",
     madeWithLoveBy: "Laget med <1/> av",
     codeAvailableIn: "Kildekode tilgjengelig i",
     download: "Last ned",
@@ -12,9 +14,10 @@ const no = {
     message: "Melding",
     emailValidationError: "Vennligst skriv inn en gyldig e-post",
     nameValidationError: "Vennligst skriv inn navnet ditt",
-    messageValidationError: "Meldingen må være minst {{count}} tegn lang",
-    messageValidationError_plural:
-      "Meldingen må være minst {{count}} tegn lang",
+    messageValidationError: "Meldingen må være minst {{count}} tegn",
+    messageValidationError_plural: "Meldingen må være minst {{count}} tegn",
+    formSuccess: "Skjemaet ble sendt!",
+    formError: "Upss! Det oppsto en feil. Vennligst prøv igjen.",
   },
 };
 

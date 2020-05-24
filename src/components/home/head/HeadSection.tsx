@@ -9,6 +9,7 @@ import {
   makeStyles,
   Paper,
   Typography,
+  Container,
   ThemeProvider,
 } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
@@ -78,32 +79,30 @@ const HeadSection = () => {
         className={classes.main}
       >
         <Fade in timeout={1000}>
-          <Grid item>
-            <Avatar
-              alt="Diego Garcia Lozano"
-              src="/static/picture-square.png"
-              className={classes.avatar}
-            />
-          </Grid>
+          <Avatar
+            alt="Diego Garcia Lozano"
+            src="/static/picture-square.png"
+            className={classes.avatar}
+          />
         </Fade>
-        <Grow in timeout={1500}>
-          <Grid item>
+        <Grid item>
+          <Grow in timeout={1500}>
             <Typography variant="h2" align="center" className={classes.name}>
-              Diego García Lozano
+              {t("headTitle")}
             </Typography>
-          </Grid>
-        </Grow>
-        <Grow in timeout={1500}>
-          <Grid item>
+          </Grow>
+        </Grid>
+        <Container maxWidth="sm">
+          <Grow in timeout={1500}>
             <Typography
               variant="h4"
               align="center"
               className={classes.jobTitle}
             >
-              {t("softwareEngineer")}
+              {t("headSubtitle")}
             </Typography>
-          </Grid>
-        </Grow>
+          </Grow>
+        </Container>
 
         <Grid
           id="social-media"
