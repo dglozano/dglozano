@@ -15,6 +15,7 @@
     "@types/node": "^12.12.30",
     "@types/react": "^16.9.25",
     "@types/react-dom": "^16.9.5",
+    "@types/react-vertical-timeline-component": "^2.6.0",
     "express": "^4.17.1",
     "i18next": "^19.3.4",
     "i18next-browser-languagedetector": "^4.0.2",
@@ -23,6 +24,7 @@
     "react-i18next": "^11.3.4",
     "react-icons": "^3.9.0",
     "react-scripts": "3.4.1",
+    "react-vertical-timeline-component": "^2.6.2",
     "typescript": "^3.7.5"
   },
   "scripts": {

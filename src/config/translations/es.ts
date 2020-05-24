@@ -18,6 +18,7 @@ const es = {
       "El mensaje debe contener al menos {{count}} caracter",
     messageValidationError_plural:
       "El mensaje debe contener al menos {{count}} caracteres",
+    experience: "Experiencia",
     formSuccess: "El formulario se envío correctamente!",
     formError: "Upss! Hubo un error. Prueba de nuevo por favor.",
   },
