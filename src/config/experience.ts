@@ -22,7 +22,7 @@ export const experiences: ExperienceDetails[] = [
     position: "Software Consultant",
     company: "Miles AS",
     location: "Stavanger, Norway",
-    tags: [".NET", "C#", "React", "Azure", "SqlServer", "EF 6"],
+    tags: [".NET", "C#", "React", "Azure", "Terraform", "SqlServer", "EF 6"],
     description:
       "Hired out to Altus Intervention since October 2019, where we have been developing multiple digital solutions for the HR department using ReactJs, .NET Framework and Azure.",
     date: "October 2019 - Present",
