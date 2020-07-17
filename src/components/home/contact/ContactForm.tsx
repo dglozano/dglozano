@@ -2,10 +2,37 @@ import React, { useState } from "react";
 import { Button, Grid, Paper, TextField, makeStyles } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import { useTranslation } from "react-i18next";
-import { Alert } from "@material-ui/lab";
-import Snackbar from "@material-ui/core/Snackbar";
 
 import { encode } from "utils/utils";
+import { useSnackbar } from "components/snackbar/SnackbarContext";
+
+const MESSAGE_MIN_LENGTH = 20;
+
+type FormValue = {
+  value: string;
+  error: string;
+};
+
+type ContactFormState = {
+  email: FormValue;
+  name: FormValue;
+  message: FormValue;
+};
+
+const initialFormState: ContactFormState = {
+  email: {
+    value: "",
+    error: "",
+  },
+  name: {
+    value: "",
+    error: "",
+  },
+  message: {
+    value: "",
+    error: "",
+  },
+};
 
 const fieldValidation: {
   [key: string]: (value: string) => string;
@@ -24,23 +51,6 @@ const fieldValidation: {
   },
 };
 
-const MESSAGE_MIN_LENGTH = 20;
-
-const initialFormState = {
-  email: {
-    value: "",
-    error: "",
-  },
-  name: {
-    value: "",
-    error: "",
-  },
-  message: {
-    value: "",
-    error: "",
-  },
-};
-
 const useStyles = makeStyles((theme) => ({
   formPaper: {
     padding: theme.spacing(4),
@@ -56,11 +66,9 @@ const useStyles = makeStyles((theme) => ({
 const ContactForm = () => {
   const classes = useStyles();
   const { t } = useTranslation();
+  const { addSnackbar } = useSnackbar();
 
   const [formState, setFormState] = useState(initialFormState);
-  const [snackbarState, setSnackbarState] = useState<
-    "success" | "error" | "closed"
-  >("closed");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -95,13 +103,13 @@ const ContactForm = () => {
         if (!response.ok) {
           return Promise.reject(response.json());
         }
-        setSnackbarState("success");
+        addSnackbar(t("formSuccess"), "success");
         setFormState({ ...initialFormState });
       })
       .catch((error) => {
-        setSnackbarState("error");
-        console.log(error);
-      });
+        addSnackbar(t("formError"), "error");
+      })
+      .finally(() => {});
   };
 
   const isFormInvalid = Object.values(formState).some(
@@ -189,35 +197,6 @@ const ContactForm = () => {
           </Grid>
         </Grid>
       </form>
-      {/*TODO: Refactor */}
-      <Snackbar
-        open={snackbarState === "success"}
-        autoHideDuration={4000}
-        onClose={() => setSnackbarState("closed")}
-      >
-        <Alert
-          elevation={6}
-          variant="filled"
-          severity="success"
-          onClose={() => setSnackbarState("closed")}
-        >
-          {t("formSuccess")}
-        </Alert>
-      </Snackbar>
-      <Snackbar
-        open={snackbarState === "error"}
-        autoHideDuration={4000}
-        onClose={() => setSnackbarState("closed")}
-      >
-        <Alert
-          elevation={6}
-          variant="filled"
-          severity="error"
-          onClose={() => setSnackbarState("closed")}
-        >
-          {t("formError")}
-        </Alert>
-      </Snackbar>
     </Paper>
   );
 };
