@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
   socialMediaIconButton: {
     background: theme.palette.primary.dark,
     margin: theme.spacing(1),
+    color: theme.dglozano.palette.white,
     "&:hover": {
       background: theme.palette.secondary.main,
     },
