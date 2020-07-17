@@ -38,7 +38,7 @@ const AppFooter = () => {
         square
         className={classes.footer}
       >
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={4}>
           <Typography variant="body2" align="center">
             <Trans i18nKey="madeWithLoveBy">
               Made with <HeartIcon className={classes.heartIcon} /> by
@@ -57,7 +57,20 @@ const AppFooter = () => {
             </Link>
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={4}>
+          <Typography variant="body2" align="center">
+            <Link
+              href={socialMediaAccountsDetails["email"].href}
+              target="_blank"
+              rel="noopener"
+              color="inherit"
+              underline="hover"
+            >
+              <strong>{socialMediaAccountsDetails["email"].accountName}</strong>
+            </Link>
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={4}>
           <Typography variant="body2" align="center">
             {t("codeAvailableIn")}&nbsp;
             <Link
