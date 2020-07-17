@@ -6,12 +6,15 @@ import App from "components/app/App";
 import "config/translations/_i18n";
 import * as serviceWorker from "serviceWorker";
 import { lightTheme } from "config/themes";
+import { SnackbarContainer } from "components/snackbar/SnackbarContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
     <ThemeProvider theme={lightTheme}>
-      <App />
+      <SnackbarContainer>
+        <App />
+      </SnackbarContainer>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

@@ -68,8 +68,9 @@ const ExperienceSection = ({ experiences }: Props) => {
         </Grid>
         <Grid item>
           <VerticalTimeline className={classes.timeline}>
-            {experiences.map((experience) => (
+            {experiences.map((experience, index) => (
               <VerticalTimelineElement
+                key={index}
                 contentStyle={{
                   background: theme.palette.primary.main,
                   color: theme.dglozano.palette.white,
@@ -111,8 +112,9 @@ const ExperienceSection = ({ experiences }: Props) => {
                   {experience.description}
                 </Typography>
                 <Grid>
-                  {experience.tags.map((tag) => (
+                  {experience.tags.map((tag, index) => (
                     <Chip
+                      key={index}
                       color="secondary"
                       label={tag}
                       className={classes.tag}
