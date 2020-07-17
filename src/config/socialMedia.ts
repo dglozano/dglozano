@@ -42,7 +42,7 @@ export const socialMediaAccountsDetails: {
   },
   email: {
     title: "Email",
-    accountName: "diegogarcialozano",
+    accountName: "diegogarcialozano95@gmail.com",
     href: "mailto:diegogarcialozano95@gmail.com",
     Icon: FaEnvelope,
   },
