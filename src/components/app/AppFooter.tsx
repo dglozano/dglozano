@@ -12,6 +12,7 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { darkTheme } from "config/themes";
 import { socialMediaAccountsDetails } from "config/socialMedia";
+import { REPO_NAME } from "config/constants";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -60,7 +61,7 @@ const AppFooter = () => {
           <Typography variant="body2" align="center">
             {t("codeAvailableIn")}&nbsp;
             <Link
-              href={`${socialMediaAccountsDetails["github"].href}/dglozano`}
+              href={`${socialMediaAccountsDetails["github"].href}/${REPO_NAME}`}
               target="_blank"
               rel="noopener"
               color="inherit"

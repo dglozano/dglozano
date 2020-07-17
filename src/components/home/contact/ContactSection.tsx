@@ -13,6 +13,7 @@ import { useTranslation, Trans } from "react-i18next";
 import ContactForm from "components/home/contact/ContactForm";
 import { darkTheme } from "config/themes";
 import { scrollToView } from "utils/utils";
+import { socialMediaAccountsDetails } from "config/socialMedia";
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -61,7 +62,7 @@ const ContactSection = () => {
               <Trans i18nKey="letsTalkText">
                 Please don't hesitate to
                 <Link
-                  href="mailto:diegogarcialozano95@gmail.com"
+                  href={socialMediaAccountsDetails["email"].href}
                   color="inherit"
                   underline="hover"
                 >

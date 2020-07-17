@@ -3,7 +3,7 @@ import {
   FaGithub,
   FaStackOverflow,
   FaTwitter,
-  FaInstagram
+  FaEnvelope,
 } from "react-icons/fa";
 
 type SocialMediaLinkDetails = {
@@ -20,30 +20,30 @@ export const socialMediaAccountsDetails: {
     title: "Linkedin",
     accountName: "diegogarcialozano",
     href: "https://www.linkedin.com/in/diegogarcialozano/",
-    Icon: FaLinkedinIn
+    Icon: FaLinkedinIn,
   },
   github: {
     title: "Github",
     accountName: "dglozano",
     href: "https://github.com/dglozano",
-    Icon: FaGithub
+    Icon: FaGithub,
   },
   stackoverflow: {
     title: "StackOverflow",
     accountName: "dglozano",
     href: "https://stackoverflow.com/users/10648865/dglozano",
-    Icon: FaStackOverflow
+    Icon: FaStackOverflow,
   },
   twitter: {
     title: "Twitter",
     accountName: "dglozano95",
     href: "https://twitter.com/dglozano95",
-    Icon: FaTwitter
+    Icon: FaTwitter,
   },
-  instagram: {
-    title: "Instagram",
+  email: {
+    title: "Email",
     accountName: "diegogarcialozano",
-    href: "https://instagram.com/diegogarcialozano",
-    Icon: FaInstagram
-  }
+    href: "mailto:diegogarcialozano95@gmail.com",
+    Icon: FaEnvelope,
+  },
 };
