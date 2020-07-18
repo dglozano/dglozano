@@ -26,7 +26,7 @@ export const [useSnackbar, SnackbarContextProvider] = createContext<
   SnackbarContextType
 >();
 
-export const SnackbarContainer = ({ children }: Props) => {
+const SnackbarContainer = ({ children }: Props) => {
   const [snackbars, setSnackbars] = React.useState<SnackbarMessage[]>([]);
   const [open, setOpen] = React.useState(false);
   const [messageInfo, setMessageInfo] = React.useState<
@@ -90,3 +90,5 @@ export const SnackbarContainer = ({ children }: Props) => {
     </SnackbarContextProvider>
   );
 };
+
+export default SnackbarContainer;
