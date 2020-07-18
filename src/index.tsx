@@ -6,7 +6,7 @@ import App from "components/app/App";
 import "config/translations/_i18n";
 import * as serviceWorker from "serviceWorker";
 import { lightTheme } from "config/themes";
-import { SnackbarContainer } from "components/snackbar/SnackbarContext";
+import SnackbarContainer from "components/snackbar/SnackbarContext";
 
 ReactDOM.render(
   <React.StrictMode>

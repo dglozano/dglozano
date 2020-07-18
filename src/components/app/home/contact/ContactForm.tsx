@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Button, Grid, Paper, TextField, makeStyles } from "@material-ui/core";
+import { Grid, Paper, TextField, makeStyles } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import { useTranslation } from "react-i18next";
 
 import { encode } from "utils/utils";
 import { useSnackbar } from "components/snackbar/SnackbarContext";
+import LoadingButton from "components/common/LoadingButton";
 
 const MESSAGE_MIN_LENGTH = 20;
 
@@ -69,6 +70,7 @@ const ContactForm = () => {
   const { addSnackbar } = useSnackbar();
 
   const [formState, setFormState] = useState(initialFormState);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -89,11 +91,13 @@ const ContactForm = () => {
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
+    setLoading(true);
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "contact", // this is required to help Netlify's post processor bots and matches the form name defined in index.html
+        "form-name": "contact", // this is required to help Netlify's post processor bots. It has to match the form name defined in index.html
         name: formState.name.value,
         email: formState.email.value,
         message: formState.message.value,
@@ -109,7 +113,7 @@ const ContactForm = () => {
       .catch((error) => {
         addSnackbar(t("formError"), "error");
       })
-      .finally(() => {});
+      .finally(() => setLoading(false));
   };
 
   const isFormInvalid = Object.values(formState).some(
@@ -183,8 +187,9 @@ const ContactForm = () => {
             justify="center"
           >
             <Grid item sm={6} xs={12}>
-              <Button
-                fullWidth
+              <LoadingButton
+                loading={loading}
+                fullWidth={true}
                 color="secondary"
                 disabled={isFormInvalid}
                 endIcon={<SendIcon />}
@@ -192,7 +197,7 @@ const ContactForm = () => {
                 type="submit"
               >
                 <strong>{t("send")}</strong>
-              </Button>
+              </LoadingButton>
             </Grid>
           </Grid>
         </Grid>
