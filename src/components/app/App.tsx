@@ -10,7 +10,7 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 import AppFooter from "components/app/AppFooter";
 import AppToolbar from "components/app/AppToolbar";
-import HomeContainer from "components/home/HomeContainer";
+import HomeContainer from "components/app/home/HomeContainer";
 import { scrollToView } from "utils/utils";
 
 const useStyles = makeStyles((theme) => ({

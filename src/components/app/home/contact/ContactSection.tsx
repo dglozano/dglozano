@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { useTranslation, Trans } from "react-i18next";
 
-import ContactForm from "components/home/contact/ContactForm";
+import ContactForm from "components/app/home/contact/ContactForm";
 import { darkTheme } from "config/themes";
 import { scrollToView } from "utils/utils";
 import { socialMediaAccountsDetails } from "config/socialMedia";
